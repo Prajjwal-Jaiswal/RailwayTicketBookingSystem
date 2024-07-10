@@ -11,7 +11,7 @@ import java.sql.Date;
 import java.sql.Time;
 import java.util.List;
 import java.util.Map;
-
+ 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 @Builder
