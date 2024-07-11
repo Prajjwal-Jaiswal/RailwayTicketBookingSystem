@@ -84,11 +84,11 @@ public class UserBookingService{
             return Boolean.FALSE;
         }
 
-        String finalTicketId1 = ticketId;  //Because strings are immutable
-        boolean removed = user.getTicketsBooked().removeIf(ticket -> ticket.getTicketId().equals(finalTicketId1));
+        // String finalTicketId1 = ticketId;  //Because strings are immutable
+        // boolean removed = user.getTicketsBooked().removeIf(ticket -> ticket.getTicketId().equals(finalTicketId1));
 
         String finalTicketId = ticketId;
-        user.getTicketsBooked().removeIf(Ticket -> Ticket.getTicketId().equals(finalTicketId));
+        boolean removed = user.getTicketsBooked().removeIf(Ticket -> Ticket.getTicketId().equals(finalTicketId));
         if (removed) {
             System.out.println("Ticket with ID " + ticketId + " has been canceled.");
             return Boolean.TRUE;
